@@ -1,5 +1,6 @@
 const lista_1 = [10, 30, 25, 2, 6];
-const lista_2 = [78, 1, 9, 4, 12];
+const lista_2 = [78, 1, 9, 4, 6, 12];
+const lista_3 = ['João', 'Maria', 'Carla', 'Ezekiel'];
 
 //concat() -> JUNTA DUAS ARRAYS
 function concatenarListas(){
@@ -33,31 +34,33 @@ function encontraIndice(){
 
 };
 
-//lastIndexOf -> SEMELHANTE AO FINDINDEX(), MAS COMEÇA DO ÚLTIMO ELEMENTO
+//findLastIndex -> SEMELHANTE AO FINDINDEX(), MAS COMEÇA DO ÚLTIMO ELEMENTO
 function encontraUltimoIndice(){
 
-    const novaLista = lista_2.lastIndexOf((valor) => valor <= 3);
+    const novaLista = lista_2.findLastIndex((valor) => valor <= 7);
     return novaLista;
 
 };
 
-//forEach
+//forEach -> PERCORRE CADA ELEMENTO DA LISTA EXECUTANDO UMA FUNÇÃO QUE É PASSADA COMO PARÂMETRO
+lista_1.forEach(valor => {
+
+ //   console.log(`O valor é ${valor}`);
+
+})
+
+//pop -> ALTERA O ARRAY ORIGINAL, REMOVENDO O ÚLTIMO ELEMENTO
+lista_2.pop(); //REMOVEU O 12
+
+//shift -> ALTERA O ARRAY ORIGINAL, REMOVENDO O PRIMEIRO ELEMENTO
+lista_1.shift(); //REMOVEU O 10
 
 
-//pop
+//push -> ALTERA O ARRAY ORIGINAL, ADICIONANDO O ELEMENTO PASSADO NA ÚLTIMA POSIÇÃO
+lista_2.push(15); //ADICIONOU O 15
 
-
-//shift
-
-
-//push
-
-
-//push
-
-
-//unshift
-
+//unshift -> ALTERA O ARRAY ORIGINAL, ADICIONANDO O ELEMENTO PASSADO NA PRIMEIRA POSIÇÃO
+lista_1.unshift(21); //ADICIONOU O 21
 
 //reduce
 
@@ -65,15 +68,29 @@ function encontraUltimoIndice(){
 //reduceRight
 
 
-//reverse
+//reverse -> INVERTE A ORDEM DOS ELEMENTOS DO ARRAY
+function inverteOrdem(){
 
+    const listaInvertida = lista_3.reverse();
+    return listaInvertida;
 
-//slice
+};
 
+//slice -> DIVIDE UMA LISTA COM BASE NOS PARÂMETROS PASSADOS (INÍCIO DA NOVA LISTA, FIM DA NOVA LISTA)
+function separaLista(){
 
-//sort
+    const listaSeparada = lista_1.slice(0, lista_1.length / 2);
+    return listaSeparada;
 
+};
 
-//splice
+//sort -> ORGANIZA O ARRAY DE ACORDO COM A CLASSIFAÇÃO UNICODE, MAS NÃO FUNCIONA BEM COM NÚMEROS
+function organizaOrdem(){
 
+    const listaOrganizada = lista_3.sort();
+    return listaOrganizada;
 
+};
+
+//splice -> CONSEGUE REMOVER UM OU MAIS ELEMENTOS CONSECUTIVOS, A DEPENDEDER DO PARÂMETRO, E INCLUIR NOVOS ELEMENTOS
+lista_3.splice(1, 2, 'Bete'); //(ÍNDICE DO ELEMENTO REMOVIDO, QUANTOS ELEMENTOS SERÃO REMOVIDOS A PARTIR DELE, ELEMENTO QUE ENTRARÁ NO LUGAR)
