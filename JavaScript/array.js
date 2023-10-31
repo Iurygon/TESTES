@@ -62,9 +62,6 @@ lista_2.push(15); //ADICIONOU O 15
 //unshift -> ALTERA O ARRAY ORIGINAL, ADICIONANDO O ELEMENTO PASSADO NA PRIMEIRA POSIÇÃO
 lista_1.unshift(21); //ADICIONOU O 21
 
-//reduce
-
-
 //reduceRight
 
 
