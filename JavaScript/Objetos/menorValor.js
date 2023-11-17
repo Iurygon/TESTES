@@ -16,3 +16,5 @@ function menorValor(array, initialIndex) {
     return maisBarato;
 
 };
+
+module.exports = menorValor;
