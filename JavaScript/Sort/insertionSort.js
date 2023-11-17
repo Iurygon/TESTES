@@ -3,11 +3,11 @@ const changeElements = require("./changeElements");
 function insertionSort(array){
 
     for (let i = 0; i < array.length; i++){
-        let actualIndex = i;
+        let minIndex = i;
         
-        while (actualIndex > 0 && array[actualIndex] < array[actualIndex - 1]){
-            changeElements(array, actualIndex);
-            actualIndex--;
+        while (minIndex > 0 && array[minIndex] < array[minIndex - 1]){
+            changeElements(array, minIndex);
+            minIndex--;
         };
     };
     return array
