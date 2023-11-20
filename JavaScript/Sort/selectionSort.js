@@ -6,9 +6,7 @@ function selectionSort(array){
                 minIndex = j; // Update minIndex to the index of the new minimum value
             }
         }
-        const temp = array[i];
-        array[i] = array[minIndex];
-        array[minIndex] = temp;
+        [array[i], array[minIndex]] = [array[minIndex], array[i]];
     }
     return array;
 }
