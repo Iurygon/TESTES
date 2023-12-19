@@ -13,3 +13,5 @@ const novoDocente = new Docente ('Mariana', 'marina@email.com', '20/10/1999')
 console.log(novoDocente)
 console.log(novoDocente.exibirInfos())
 console.log(novoDocente.aprovaEstudante('Iury', 'ADS'))
+
+/*Importante lembrar que as funções definidas nas classes não tem a características de hoisting, então é preciso declará-las antes de chamar as funções */
