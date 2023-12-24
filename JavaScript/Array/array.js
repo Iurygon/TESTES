@@ -62,9 +62,6 @@ lista_2.push(15); //ADICIONOU O 15
 //unshift -> ALTERA O ARRAY ORIGINAL, ADICIONANDO O ELEMENTO PASSADO NA PRIMEIRA POSIÇÃO
 lista_1.unshift(21); //ADICIONOU O 21
 
-//reduceRight
-
-
 //reverse -> INVERTE A ORDEM DOS ELEMENTOS DO ARRAY
 function inverteOrdem(){
 
@@ -91,3 +88,20 @@ function organizaOrdem(){
 
 //splice -> CONSEGUE REMOVER UM OU MAIS ELEMENTOS CONSECUTIVOS, A DEPENDEDER DO PARÂMETRO, E INCLUIR NOVOS ELEMENTOS
 lista_3.splice(1, 2, 'Bete'); //(ÍNDICE DO ELEMENTO REMOVIDO, QUANTOS ELEMENTOS SERÃO REMOVIDOS A PARTIR DELE, ELEMENTO QUE ENTRARÁ NO LUGAR)
+
+//split -> Divide uma string em sublistas com base no valor que é passado como divisor
+function divideString(){
+    const nomeCompleto = 'Iury Gontijo Silva';
+    let [nome, ...sobrenome] = nomeCompleto.split(' ')//Aqui, chamamos o métodos split() para poder dividir a string 'Iury Gontijo Silva' em sublistas, passando como divisor o caractere de espaço ' '. Além do mais, usamos um spread operator para deixar em 'sobrenome' todo o restante do sobrenome, e não apenas o segundo nome.
+    console.log(nome)
+    console.log(sobrenome)
+}
+
+//join -> Une strings diferentes, usando como divisor o elemento que é passado
+function uneString(){
+    const [nome, ...sobrenome] = ['Iury', 'Gontijo', 'Silva']
+    const sobrenomeCompleto = sobrenome.join(' ')//Faz a união das strings presentes em 'sobrenome' e usa como separador entre cada string o caractere ' '.
+    console.log(sobrenomeCompleto)
+}
+
+uneString()
